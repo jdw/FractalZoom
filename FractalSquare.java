@@ -14,12 +14,12 @@ public class FractalSquare {
 	public void screenToMSetCoord(double x, double y, double w, double h) {
 		//double tmpX = this.fm.getSquare().getMinRe() + this.fm.getSquare().getWidth() * (2 * e.getX() / this.normalSize.getWidth());
 		//double tmpY = -1 * this.fm.getSquare().getMaxRe() + this.fm.getSquare().getHeight() * (2 * e.getY() / this.normalSize.getHeight());
-		double tmpX = e.getX() / this.normalSize.getWidth();
-		double tmpY = e.getY() / this.normalSize.getHeight();
-		tmpX *= this.fm.getSquare().getWidth();
-		tmpY *= this.fm.getSquare().getHeight();
-		tmpX -= this.fm.getSquare().getWidth() / 2;
-		tmpY -= this.fm.getSquare().getHeight() / 2;
+		double tmpX = x / w;
+		double tmpY = y / h;
+		tmpX *= getWidth();
+		tmpY *= getHeight();
+		tmpX -= getWidth() / 2;
+		tmpY -= getHeight() / 2;
 		tmpX *= 2;
 		tmpY *= -2;
 		
